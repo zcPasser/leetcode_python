@@ -10,6 +10,13 @@ class TreeNode:
 
 class Solution:
     def maxDepth(self, root: [TreeNode]) -> int:
+        def get_height(node: TreeNode) -> int:
+            if not node:
+                return 0
+            left_height = get_height(node.left)
+            right_height = get_height(node.right)
+            node_height = 1 + max(left_height, right_height)
+            return node_height
         ans = 0
         if root:
             que = deque()
