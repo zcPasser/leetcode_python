@@ -29,19 +29,19 @@ class Solution:
             helper(root, 1)
         return ans
     # 迭代实现——层序遍历
-    # def findBottomLeftValue(self, root: [TreeNode]) -> int:
-    #     ans = 0
-    #     if root:
-    #         que = deque()
-    #         que.append(root)
-    #         while que:
-    #             size = len(que)
-    #             ans = que[0].val
-    #             for _ in range(size):
-    #                 p = que.popleft()
-    #                 if p.left:
-    #                     que.append(p.left)
-    #                 if p.right:
-    #                     que.append(p.right)
-    #
-    #     return ans
+    def findBottomLeftValue(self, root: [TreeNode]) -> int:
+        ans = 0
+        if root:
+            que = deque()
+            que.append(root)
+            while que:
+                size = len(que)
+                ans = que[0].val
+                for _ in range(size):
+                    p = que.popleft()
+                    if p.left:
+                        que.append(p.left)
+                    if p.right:
+                        que.append(p.right)
+
+        return ans
