@@ -71,3 +71,6 @@ print(-132 // 6)
 # a[1] = a[0] ^ a[1]
 # a[0] = a[0] ^ a[1]
 # print(a)
+
+path = [['.'] * 3 for _ in range(3)]
+print(path)
